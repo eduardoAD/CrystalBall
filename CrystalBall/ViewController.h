@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CrystalBall.h"
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
+@property (strong, nonatomic) CrystalBall *cristalBall;
+
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
+
+-(void) makePrediction;
 
 @end
-

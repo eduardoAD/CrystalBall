@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,82 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CB00001" translatesAutoresizingMaskIntoConstraints="NO" id="gcl-Hj-017">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is decidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdM-cd-iGq">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="GZa-7s-0Wd"/>
+                                    <constraint firstAttribute="width" constant="280" id="eUa-8W-H7j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.54704483699999995" green="0.082067103710000006" blue="0.04888702558" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GZa-7s-0Wd"/>
+                                        <exclude reference="eUa-8W-H7j"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="GZa-7s-0Wd"/>
+                                        <include reference="eUa-8W-H7j"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gcl-Hj-017" secondAttribute="trailing" id="2uU-qn-dzZ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="gcl-Hj-017" secondAttribute="bottom" id="4wT-E1-5Pt"/>
+                            <constraint firstItem="gcl-Hj-017" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="914-ur-kH6"/>
+                            <constraint firstItem="VdM-cd-iGq" firstAttribute="bottom" secondItem="gcl-Hj-017" secondAttribute="bottom" constant="-245" id="Kn5-av-uNe"/>
+                            <constraint firstItem="gcl-Hj-017" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="vMh-UG-w6J"/>
+                            <constraint firstItem="VdM-cd-iGq" firstAttribute="centerX" secondItem="gcl-Hj-017" secondAttribute="centerX" id="yPr-3R-bIJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gcl-Hj-017"/>
+                                <exclude reference="VdM-cd-iGq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Kn5-av-uNe"/>
+                                <exclude reference="yPr-3R-bIJ"/>
+                                <exclude reference="2uU-qn-dzZ"/>
+                                <exclude reference="4wT-E1-5Pt"/>
+                                <exclude reference="914-ur-kH6"/>
+                                <exclude reference="vMh-UG-w6J"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="gcl-Hj-017"/>
+                                <include reference="VdM-cd-iGq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Kn5-av-uNe"/>
+                                <include reference="yPr-3R-bIJ"/>
+                                <include reference="2uU-qn-dzZ"/>
+                                <include reference="4wT-E1-5Pt"/>
+                                <include reference="914-ur-kH6"/>
+                                <include reference="vMh-UG-w6J"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="gcl-Hj-017" id="iEr-90-cXO"/>
+                        <outlet property="predictionLabel" destination="VdM-cd-iGq" id="XGb-in-F6L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="380"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CB00001" width="320" height="568"/>
+    </resources>
 </document>
